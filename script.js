@@ -1,6 +1,9 @@
+// initiating three values, note to self - think how to make these not global
 
 var number1 = '', number2 = '0', operator;
 
+/* the 'main' function that gets called whenever an operator button is pressed
+with the event handler. The function does different things depending on the operator button */
 function operate(operator, num1, num2){
     
     if (operator === '+') {
@@ -68,7 +71,8 @@ function operate(operator, num1, num2){
 }
 
 
-
+/*event handler for all the numbers, functions by concatonating a "number1"
+string which gets turned into a float when passed to the main function */
 
 function startNums() {
     let nodes = document.getElementsByClassName("number");
@@ -96,6 +100,7 @@ function startNums() {
 
 }
 
+/* event handler for the main operators*/
 function startOps() {
     let nodes = document.getElementsByClassName("operator");
     for(let i = 0; i < nodes.length; i++){
@@ -106,6 +111,8 @@ function startOps() {
         })
     }
 }
+
+/*event handler for the auxilary stuff, liek backspace, clear etc */
 
 function auxOps(){
     let nodes = document.getElementsByClassName("aux");
@@ -136,6 +143,7 @@ function auxOps(){
     }
 }
 
+/*event handler for the decimal point */
 function floatPoint() {
     let nodes = document.getElementsByClassName("makeFloat");
     for(let i = 0; i < nodes.length; i++){
@@ -146,7 +154,7 @@ function floatPoint() {
          })
 }
 }
-
+/*starts all the event handlers on the page*/
 function initCalc (){
 startNums();
 startOps();
