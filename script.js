@@ -156,10 +156,24 @@ function floatPoint() {
 }
 /*starts all the event handlers on the page*/
 function initCalc (){
-startNums();
-startOps();
-auxOps();
-floatPoint();
+    startNums();
+    startOps();
+    auxOps();
+    floatPoint();
+    highlight();
 }
 
+var btn = document.getElementsByTagName('button');
+
+function highlight(){
+    for(i = 0; i < btn.length; i++){
+        btn[i].addEventListener('mouseover', (e) => {
+           e.target.style.filter = "brightness(1.2)"
+        })
+        btn[i].addEventListener('mouseleave', (e) => {
+            e.target.style.filter = "brightness(1.0)"
+         })
+       
+    }
+}
 initCalc();
