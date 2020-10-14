@@ -1,0 +1,64 @@
+body {
+    background-color: bisque;
+}
+
+#calcContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;  
+    border: 3px solid black;
+    height: 250px;
+    width: 200px;
+    margin: auto;
+    margin-top:20%;
+}
+
+.numGrid { grid-area: 2 / 1 / 5 / 4; }
+.opGrid { grid-area: 1 / 4 / 6 / 5; }
+.numZero { grid-area: 5 / 1 / 6 / 3; }
+.auxOp { grid-area: 1 / 1 / 2 / 4; }
+.makeFloat { grid-area: 5 / 3 / 6 / 4; }
+
+button {
+    height: 50px;
+    width: 50px;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+.numGrid{
+    display: flex;
+    flex-flow: row wrap;
+    }
+.numGrid>button, #zero{
+    background-color: #f5eb2f;
+}
+.auxOp{
+    display:flex;
+    flex-flow: row wrap;
+}
+.opGrid>button{
+    background-color: #f5882f;
+}
+
+#equals{
+    background-color: #187abb;
+}
+
+.auxOp>button{
+    background-color: #f5882f;
+}
+
+.makeFloat>button{
+    background-color: #f5eb2f;
+}
+
+#zero{
+    width: 100px;
+}
